@@ -8,7 +8,7 @@
   "builders": [
     {
       "name": "vagrant-vsphere",
-      "vm_name": "photon",
+      "vm_name": "{{user `build_dir`}}",
       "vmdk_name": "photon-disk1",
       "type": "vmware-iso",
       "headless": false,
