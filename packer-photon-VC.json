@@ -2,7 +2,8 @@
   "variables": {
     "iso_file": "",
     "iso_sha1sum": "",
-    "root_password": "2RQrZ83i79N6szpvZNX6"
+    "root_password": "2RQrZ83i79N6szpvZNX6",
+    "build_dir":"photon_build"
   },
   "builders": [
     {
@@ -19,7 +20,7 @@
       "iso_checksum_type": "sha1",
       "remote_type" : "esx5",
       "remote_datastore" : "SSD-12",
-      "output_directory" : "photon_build",
+      "output_directory" : "{{user `build_dir`}}",
       "remote_host" : "10.25.27.12",
       "remote_username" : "root",
       "remote_password" : "VMware1!",
