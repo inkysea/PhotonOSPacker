@@ -19,6 +19,7 @@
       "iso_checksum_type": "sha1",
       "remote_type" : "esx5",
       "remote_datastore" : "SSD-12",
+      "output_directory" : "photon_build",
       "remote_host" : "10.25.27.12",
       "remote_username" : "root",
       "remote_password" : "VMware1!",
@@ -55,22 +56,14 @@
     },
     {
       "type": "shell",
-      "only": ["vagrant-vmware_desktop"],
-      "script": "scripts/photon-vagrant-user_provisioning.sh"
-    },
-    {
-      "type": "shell",
-      "only": ["appcatalyst","vagrant-vsphere"],
       "script": "scripts/photon-appcatalyst-user_provisioning.sh"
     },
     {
       "type": "shell",
-      "only": ["vagrant-vmware_desktop", "appcatalyst", "vagrant-vsphere"],
       "script": "scripts/photon-sharedfolders_prep.sh"
     },
     {
       "type": "file",
-      "only": ["vagrant-vmware_desktop","vagrant-vsphere"],
       "source": "scripts/photon-docker-unit.service",
       "destination": "/lib/systemd/system/docker.service"
     },
@@ -84,7 +77,6 @@
     },
     {
       "type": "shell",
-      "only": ["appcatalyst","vagrant-vsphere"],
       "script": "scripts/photon-setup_docker.sh"
     },
     {
@@ -93,24 +85,7 @@
     }
   ],
   "post-processors": [
-    {
-      "type": "vagrant",
-      "only": ["vagrant-vmware_desktop"],
-      "compression_level": 9,
-      "vagrantfile_template": "scripts/photon-vagrantfile.rb",
-      "output": "photon-{{.BuildName}}.box"
-    },
-    {
-      "type": "compress",
-      "only": ["appcatalyst"],
-      "output": "photon-{{.BuildName}}_build.tar.gz"
-    },
-    {
-      "type": "vagrant-vmware-ovf",
-      "only": ["vagrant-vcenter"],
-      "vagrantfile_template": "scripts/photon-vagrantfileVC.rb",
-      "output": "photon-{{.BuildName}}_build.ovf"
-    }
+
 
   ]
   }
