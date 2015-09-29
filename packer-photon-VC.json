@@ -83,7 +83,12 @@
     {
       "type": "shell",
       "script": "scripts/photon-security_check.sh"
-    }
+    },
+      {
+      "type": "file",
+      "source": "scripts/welcome.txt",
+      "destination": "/tmp/welcome.txt"
+      }
   ],
   "post-processors": [
 

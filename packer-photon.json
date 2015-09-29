@@ -144,13 +144,22 @@
     },
     {
       "type": "shell",
-      "only": ["appcatalyst"],
       "script": "scripts/photon-setup_docker.sh"
     },
     {
       "type": "shell",
       "script": "scripts/photon-security_check.sh"
-    }
+    },
+      {
+        "type": "shell",
+        "script": "scripts/photon-security_check.sh"
+      },
+      {
+        "type": "file",
+        "source": "scripts/welcome.txt",
+        "destination": "/tmp/welcome.txt"
+      }
+
   ],
   "post-processors": [
     {

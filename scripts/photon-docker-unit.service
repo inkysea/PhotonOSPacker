@@ -4,7 +4,7 @@ Wants=network-online.target
 After=network-online.target
 
 [Service]
-ExecStart=/bin/docker -d -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --storage-driver overlay
+ExecStart=/bin/docker -d -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --storage-driver overlay --insecure-registry 192.168.254.1 --insecure-registry 10.25.27.41:8600
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 Restart=always
