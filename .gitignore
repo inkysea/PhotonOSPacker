@@ -6,3 +6,6 @@ PhotonOSPacker.iml
 .vagrant
 packer_cache
 *.tar.gz
+*.vmdk
+*.mf
+temp
