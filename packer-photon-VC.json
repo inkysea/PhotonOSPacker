@@ -41,8 +41,8 @@
         "ethernet0.virtualDev": "vmxnet3",
         "cpuid.coresPerSocket": "1",
         "ide1:0.clientDevice" : "TRUE",
-        "ide1:0.clientDevice" : "TRUE"
-        "ide1:0.devicetype" : "atapi-cdrom"
+        "ide1:0.clientDevice" : "TRUE",
+        "ide1:0.devicetype" : "atapi-cdrom",
         "memsize": "512",
         "numvcpus": "1"
       },
