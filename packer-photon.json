@@ -156,8 +156,9 @@
       },
       {
         "type": "file",
+        "only": ["vagrant-vmware_desktop", "vagrant-virtualbox"],
         "source": "scripts/welcome.txt",
-        "destination": "/tmp/welcome.txt"
+        "destination": "/var/welcome.txt"
       }
 
   ],

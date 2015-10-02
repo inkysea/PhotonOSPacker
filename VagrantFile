@@ -2,7 +2,7 @@
 #ENV['VAGRANT_DEFAULT_PROVIDER'] = 'vmware_appcatalyst'
 
 nodes = [
-    { hostname: 'nodejs', box: 'localphoton' },
+    { hostname: 'photondemo', box: 'demo/photon' },
 
 ]
 
