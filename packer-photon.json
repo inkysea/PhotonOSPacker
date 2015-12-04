@@ -145,7 +145,7 @@
     {
       "type": "shell",
       "only": ["vagrant-vmware_desktop", "vagrant-virtualbox","appcatalyst"],
-      "script": "scripts/photon-setup_docker-local.sh"
+      "script": "scripts/photon-setup_docker.sh"
     },
     {
       "type": "shell",

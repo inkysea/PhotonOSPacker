@@ -87,7 +87,7 @@
       {
       "type": "file",
       "source": "scripts/welcome.txt",
-      "destination": "/tmp/welcome.txt"
+      "destination": "/home/photon/welcome.txt"
       }
   ],
   "post-processors": [
