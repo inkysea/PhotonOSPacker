@@ -1,1 +1,1 @@
-Welcome.  This is a Photon OS image built by Packer!!!
+Welcome.  This is a Photon OS image built by Packer!!
